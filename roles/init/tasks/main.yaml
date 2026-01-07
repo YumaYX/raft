@@ -7,4 +7,7 @@
 - name: Upgrade all packages
   apt:
     upgrade: dist
+    force_apt_get: yes
+  environment:
+    DEBIAN_FRONTEND: noninteractive
 
