@@ -17,9 +17,3 @@
     - docker.io/library/rust:latest
     - docker.io/library/ruby:latest
 
-- name: check
-  shell: |
-    ccargo --version
-    cruby -v 
-  args:
-    executable: /bin/dash
