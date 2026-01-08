@@ -4,3 +4,15 @@
     update_cache: yes
     cache_valid_time: 3600
 
+- name: Install common development packages
+  apt:
+    name:
+      - build-essential
+      - pkg-config
+      - ca-certificates
+      - curl
+      - git
+      - libssl-dev
+      - zlib1g-dev
+    state: present
+

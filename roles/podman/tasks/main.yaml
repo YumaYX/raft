@@ -1,6 +1,10 @@
-- name: Install podman
+- name: Install Podman related packages
   apt:
-    name: podman
+    name:
+      - podman
+      - podman-docker
+      - podman-compose
+      - podman-systemd
     state: present
 
 - name: Enable and start podman socket
