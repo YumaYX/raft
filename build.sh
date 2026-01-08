@@ -11,7 +11,7 @@ else
   exit 1
 fi
 
-apt-get update
+#apt-get update
 apt-get install -y ansible
 
 rm -rf /tmp/raft
