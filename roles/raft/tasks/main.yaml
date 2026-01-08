@@ -14,7 +14,7 @@
 - name: Pull images for all users
   command: podman pull {{ item }}
   loop:
-    - rust:latest
+    - docker.io/library/rust:latest
     - docker.io/library/ruby:latest
 
 - name: check
