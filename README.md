@@ -3,6 +3,7 @@
 このページをお気に入り登録しておく。
 
 ```cmd
+wsl --set-default-version 2
 wsl --install
 shutdown /r /t 0
 ```
