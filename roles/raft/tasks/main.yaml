@@ -4,7 +4,7 @@
     content: |
       #!/usr/bin/env bash
       # cargo
-      alias ccargo='podman run --userns=keep-id --rm -v $PWD:/m:Z -w /m rust:latest cargo'
+      alias ccargo='podman run --userns=keep-id --rm -v $PWD:/m:Z -w /m docker.io/library/rust:latest cargo'
       # ruby
       rubyrepo='docker.io/library/ruby:latest'
       workdir='/w'
