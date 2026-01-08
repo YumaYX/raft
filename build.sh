@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+if [ -r /etc/os-release ]; then
+  . /etc/os-release
+  if [ "$ID" != "ubuntu" ]; then
+    echo "This script supports Ubuntu only."
+    exit 1
+  fi
+else
+  echo "Cannot detect OS."
+  exit 1
+fi
+
 apt-get update
 apt-get install -y ansible
 

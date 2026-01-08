@@ -1,0 +1,13 @@
+- name: Add /etc/profile.d/raft.sh
+  ansible.builtin.copy:
+    dest: /etc/profile.d/raft.sh
+    content: |
+      #!/usr/bin/env bash
+      # cargo
+      alias ccargo='podman run --userns=keep-id --rm -v $PWD:/m:Z -w /m rust:latest cargo'
+      # ruby
+      rubyrepo='docker.io/library/ruby:latest'
+      workdir='/w'
+      alias cruby='podman run --userns=keep-id --rm -v $PWD:${workdir}:Z -w ${workdir} ${rubyrepo} ruby'
+      alias cbundle='mkdir -p $PWD/vendor/bundle; podman run --userns=keep-id --rm -it -v "$PWD:${workdir}:Z" -v "$PWD/vendor/bundle:/usr/local/bundle:Z" -w ${workdir} ${rubyrepo} bundle'
+
