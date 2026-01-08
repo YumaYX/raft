@@ -19,7 +19,7 @@
 
 - name: check
   shell: |
-    . /etc/profile.d/raft.sh && cd /tmp/raft && ccargo --version
-    . /etc/profile.d/raft.sh && cd /tmp/raft && cruby -v 
+    source /etc/profile.d/raft.sh && cd /tmp/raft && ccargo --version
+    source /etc/profile.d/raft.sh && cd /tmp/raft && cruby -v 
   args:
     executable: /bin/bash
