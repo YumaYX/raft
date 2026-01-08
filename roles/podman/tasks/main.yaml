@@ -3,3 +3,9 @@
     name: podman
     state: present
 
+- name: Enable and start podman socket
+  systemd:
+    name: podman.socket
+    enabled: yes
+    state: started
+
