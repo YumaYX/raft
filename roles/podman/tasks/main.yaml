@@ -2,9 +2,6 @@
   apt:
     name:
       - podman
-      - podman-docker
-      - podman-compose
-      - podman-systemd
     state: present
 
 - name: Enable and start podman socket
