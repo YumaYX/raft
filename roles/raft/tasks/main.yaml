@@ -17,7 +17,7 @@
     - rust:latest
     - docker.io/library/ruby:latest
 
-- name: Update and upgrade
+- name: check
   shell: |
     ccargo --version
     cruby -v 
