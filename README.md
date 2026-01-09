@@ -4,7 +4,9 @@
 
 ```cmd
 wsl --set-default-version 2
-wsl --install
+```
+
+```cmd
 shutdown /r /t 0
 ```
 
